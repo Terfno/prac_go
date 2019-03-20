@@ -2,10 +2,19 @@ package main
 
 import "fmt"
 
-func adder(x int, y int) int {
+func main() {
+	// add
+	fmt.Println("3 + 4 =", adder(3, 4))
+
+	// swap
+	a, b := swap("hello", "world")
+	fmt.Println("swap! 'hello' and 'world':", a, b)
+}
+
+func adder(x, y int) int {
 	return x + y
 }
 
-func main(){
-	fmt.Println(adder(3,4))
+func swap(a, b string) (string, string) {
+	return b, a
 }
