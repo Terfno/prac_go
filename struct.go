@@ -9,12 +9,11 @@ type Intro struct { // 自己紹介のための構造体
 }
 
 func main() {
-	me := Intro{18, "Takahito Sueda", "O"}
-	miya := Intro{17, "Miyatani Hikaru", "B"}
+	var (
+		sue = Intro{18, "Takahito Sueda", "O"}
+		miya = Intro{age: 18, name: "Hikaru Miyatani"}
+		anyone = Intro{name: "ANYONE"}
+	)
 
-	fmt.Println(me.blood, miya.blood)
-
-	miya.blood = "C"
-
-	fmt.Println(miya.blood)
+	fmt.Println(sue, miya, anyone)
 }
